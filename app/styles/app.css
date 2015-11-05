@@ -1,0 +1,136 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+svg g {
+	 transition: fill .4s ease;
+}
+
+svg {
+    max-height: 70vh;
+    min-height: 39vh;
+    margin: 25px;
+    padding-top: 5vh;
+}
+
+.panel {
+    width: 33vw;
+    background: #f9f9f9;
+    height: 97vh;
+    padding-top: 25px;
+    padding: 15px;
+}
+
+h2 {
+	margin: 0;
+	padding: 15px;
+	border-bottom: 2px solid #ddd;
+    margin-bottom: 25px;
+}
+
+h2 > a {
+    float: right;
+    width: 35px;
+    text-align: center;
+    height: 35px;
+    line-height: 38px;
+    font-size: 36px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.panel ul, .panel li {
+	margin: 0;
+	padding: 0;
+}
+
+.panel ul {
+	width: 100%;
+	display: block;
+}
+
+.panel li {
+margin: 0;
+    padding: 0;
+    list-style-type: none;
+    min-height: 80px;
+    float: left;
+    width: 100%;
+}
+
+.sortable-item {
+	position: relative;
+}
+
+.sortable-item .handle {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    width: 48px;
+    text-align: center;
+    height: 48px;
+    line-height: 42px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.camera-distribution {
+	width: 60vw;
+	float: right;
+}
+
+.force-item {
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.force-item .action {
+    position: absolute;
+    right: 60px;
+    top: 12px;
+}
+
+.force-item b {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.force-item i {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.force-edit {
+    float: left;
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.force-edit label {
+        float: left;
+    width: 100%;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.force-edit .action {
+    position: absolute;
+    right: 60px;
+    top: 12px;
+}
+
+
+@media (max-width: 800px) {
+ 	svg {
+	    max-height: 30vh;
+	    min-height: 15vh;
+	    padding: 0;
+	}
+
+	.camera-distribution, .panel {
+		width: 100%;
+	}
+}

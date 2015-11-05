@@ -1,4 +1,11 @@
-<a {{action 'addForce'}}>Agregar</a>
+{{camera-distribution forces=controller.orderedForces class="camera-distribution"}}
+
+<div class="panel">
+
+<h2>
+	Bloques
+	<a {{action 'addForce'}}>+</a>
+</h2>	
 
 {{#sortable-group tagName="ul" onChange="reorderItems" as |group|}}
   {{#each controller.orderedForces as |force|}}
@@ -9,4 +16,4 @@
   {{/each}}
 {{/sortable-group}}
 
-{{camera-distribution forces=controller.orderedForces}}
+</div>
