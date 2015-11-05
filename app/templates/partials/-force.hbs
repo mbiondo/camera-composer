@@ -1,0 +1,30 @@
+{{#if force.isEditable}}
+	<form {{action "saveForce" force on="submit"}} class="create-event">
+	  <div>
+	    <label>
+	      Nombre
+	      {{input type="text" value=force.name}}
+	    </label>
+	  </div>
+	  <div>
+	    <label>
+	      Bancas
+	      {{input type="text" value=force.places}}
+	    </label>
+	  </div>		  
+	  <div>
+	    <label>
+	      Color
+	      {{spectrum-color-picker color=force.color preferredFormat="hex"}}
+	    </label>
+	  </div>		  
+	  <div>
+	    <input type="submit" value="Guardar">
+	   	<a {{action 'cancel' force}}>Cancelar</a>
+	  </div>
+	</form>		
+{{else}}
+	{{force.name}} | {{force.places}} | {{force.color}} 
+	<a {{action 'turnEditForce' force}}>Editar</a>
+	<a {{action 'removeForce' force}}>Borrar</a>
+{{/if}}

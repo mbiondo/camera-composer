@@ -1,0 +1,12 @@
+<a {{action 'addForce'}}>Agregar</a>
+
+{{#sortable-group tagName="ul" onChange="reorderItems" as |group|}}
+  {{#each controller.orderedForces as |force|}}
+    {{#sortable-item tagName="li" model=force group=group handle=".handle"}}
+    	{{partial 'partials/force'}}
+    	<span class="handle">&varr;</span>
+    {{/sortable-item}}
+  {{/each}}
+{{/sortable-group}}
+
+{{camera-distribution forces=controller.orderedForces}}
